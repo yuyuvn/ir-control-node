@@ -1,0 +1,14 @@
+{
+  "name": "ir-control-node",
+  "version": "1.0.0",
+  "description": "Ir control node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Clicia",
+  "license": "MIT",
+  "dependencies": {
+    "broadlink-rm-server": "^0.0.6"
+  }
+}
