@@ -8,6 +8,6 @@ const commands = require('./commands');
 const learnApp = BroadlinkServer(commands, true);
 const app = BroadlinkServer(commands);
 app.listen(PORT);
-learnApp.listen(LEARN_PORT);
+// learnApp.listen(LEARN_PORT);
 
 console.log('Server running, go to http://localhost:' + PORT);
