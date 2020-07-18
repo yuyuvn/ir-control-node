@@ -1,13 +1,15 @@
 const PORT = process.env.PORT || 1880;
-const LEARN_PORT = 1882;
 
 const BroadlinkServer = require('broadlink-rm-server');
 const commands = require('./commands');
 
-// /learn/command/MAC_OR_IP
-const learnApp = BroadlinkServer(commands, true);
-const app = BroadlinkServer(commands);
-app.listen(PORT);
-// learnApp.listen(LEARN_PORT);
+if (process.argv[process.argv.length - 1] == "learn") {
+  // /learn/command/MAC_OR_IP
+  const learnApp = BroadlinkServer(commands, true);
+  learnApp.listen(PORT);
+} else {
+  const app = BroadlinkServer(commands);
+  app.listen(PORT);
+}
 
 console.log('Server running, go to http://localhost:' + PORT);
